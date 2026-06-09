@@ -1,0 +1,27 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Pine accent & status" subtitle="The single pine-green accent + warm status colors" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 18px; background: var(--surface-card); }
+  .row { display: flex; gap: 10px; }
+  .sw { flex: 1; height: 96px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; padding: 9px 11px; box-shadow: var(--shadow-sm); }
+  .sw .t { font-family: var(--font-mono); font-size: 10px; letter-spacing:.08em; text-transform:uppercase; }
+  .sw .n { font-family: var(--font-mono); font-size: 11px; font-weight: 500; }
+  .sw .h { font-family: var(--font-mono); font-size: 9.5px; opacity:.8; }
+  .hi { color: var(--cream-50); }
+  .lo { color: var(--ink-900); }
+  .b { display:flex; flex-direction:column; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw hi" style="background:var(--pine-500)"><span class="t">Accent</span><span class="b"><span class="n">pine-500</span><span class="h">#2E5E4E</span></span></div>
+    <div class="sw lo" style="background:var(--pine-100)"><span class="t">Accent soft</span><span class="b"><span class="n">pine-100</span><span class="h">#D6E5DD</span></span></div>
+    <div class="sw hi" style="background:var(--honey-500)"><span class="t">Warning</span><span class="b"><span class="n">honey-500</span><span class="h">#C9912E</span></span></div>
+    <div class="sw hi" style="background:var(--berry-500)"><span class="t">Destructive</span><span class="b"><span class="n">berry-500</span><span class="h">#B23A48</span></span></div>
+  </div>
+</body>
+</html>

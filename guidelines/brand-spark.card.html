@@ -1,0 +1,28 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="The spark" subtitle="The one bespoke glyph — i-dot, bullet, hover twinkle" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-card); display:flex; align-items:center; gap:28px; height:180px; box-sizing:border-box;}
+  .big { width:84px; height:84px; }
+  .on-clay { background: var(--clay-500); border-radius: var(--radius-lg); padding: 16px; display:grid; place-items:center; }
+  .on-clay img { width:56px; height:56px; filter: brightness(0) invert(1); }
+  .uses { display:flex; flex-direction:column; gap:10px; }
+  .use { display:flex; align-items:center; gap:9px; font-family:var(--font-body); color:var(--text-body); font-size:15px;}
+  .use img { width:15px; height:15px; }
+  .note { font-family:var(--font-mono); font-size:10.5px; color:var(--text-muted); letter-spacing:.06em;}
+</style>
+</head>
+<body>
+  <img class="big" src="../assets/spark.svg" alt="spark">
+  <div class="on-clay"><img src="../assets/spark.svg" alt="spark on clay"></div>
+  <div class="uses">
+    <div class="use"><img src="../assets/spark.svg" alt="">Tittle of the "i" in the wordmark</div>
+    <div class="use"><img src="../assets/spark.svg" alt="">List bullet &amp; section marker</div>
+    <div class="use"><img src="../assets/spark.svg" alt="">One-shot twinkle on hover / load</div>
+    <p class="note">assets/spark.svg · clay #D9694A · never an emoji</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* ============================================================
+   Claudicted — Color tokens
+   Warm-only palette. Clay-orange leads, cream is the page,
+   warm near-black is ink, pine-green is the single accent.
+   ============================================================ */
+
+:root {
+  /* ---- Base ramps -------------------------------------------------- */
+
+  /* Clay-orange (primary / brand) — base is --clay-500 #D9694A */
+  --clay-50:  #FBEEE9;
+  --clay-100: #F7DBCF;
+  --clay-200: #EFBCA6;
+  --clay-300: #E89C7E;
+  --clay-400: #E18464;
+  --clay-500: #D9694A;
+  --clay-600: #C2543A;
+  --clay-700: #A2402B;
+  --clay-800: #7C3220;
+  --clay-900: #592417;
+
+  /* Cream / paper — warm neutrals from light page to soft tan */
+  --cream-50:  #FFFDF9;  /* card / raised surface */
+  --cream-100: #FBF6EE;  /* page background (brand cream) */
+  --cream-200: #F4ECDF;  /* sunken / alt section */
+  --cream-300: #EADFCC;  /* hairline-on-cream */
+  --cream-400: #E0D2B9;  /* stronger divider */
+
+  /* Ink — warm near-black ramp for text + outlines */
+  --ink-900: #221C19;  /* primary ink (brand near-black) */
+  --ink-800: #342B26;
+  --ink-700: #4A3F38;
+  --ink-600: #635649;
+  --ink-500: #80715F;  /* muted text */
+  --ink-400: #9D8E7B;
+  --ink-300: #BCAE9B;  /* faint text on cream */
+
+  /* Pine-green (single accent) — base is --pine-500 #2E5E4E */
+  --pine-50:  #ECF3EF;
+  --pine-100: #D6E5DD;
+  --pine-200: #A7C6B7;
+  --pine-500: #2E5E4E;
+  --pine-600: #244C3F;
+  --pine-700: #1B3A30;
+
+  /* Semantic status (kept warm where possible) */
+  --honey-500:  #C9912E;  /* warning / highlight */
+  --honey-100:  #F6E9C9;
+  --berry-500:  #B23A48;  /* error / destructive (warm red) */
+  --berry-100:  #F3D9DC;
+
+  /* ---- Semantic aliases ------------------------------------------- */
+
+  /* Surfaces */
+  --surface-page:    var(--cream-100);
+  --surface-card:    var(--cream-50);
+  --surface-sunken:  var(--cream-200);
+  --surface-ink:     var(--ink-900);   /* dark sections */
+  --surface-clay:    var(--clay-500);  /* clay panels */
+  --surface-pine:    var(--pine-500);
+
+  /* Text */
+  --text-strong:   var(--ink-900);
+  --text-body:     var(--ink-800);
+  --text-muted:    var(--ink-500);
+  --text-faint:    var(--ink-400);
+  --text-on-clay:  var(--cream-50);
+  --text-on-ink:   var(--cream-100);
+  --text-on-pine:  var(--cream-50);
+  --text-link:     var(--clay-700);
+
+  /* Brand roles */
+  --brand:           var(--clay-500);
+  --brand-hover:     var(--clay-600);
+  --brand-press:     var(--clay-700);
+  --brand-soft:      var(--clay-100);
+  --accent:          var(--pine-500);
+  --accent-hover:    var(--pine-600);
+  --accent-soft:     var(--pine-100);
+  --spark:           var(--clay-500);  /* the "i"-dot spark */
+
+  /* Lines & borders */
+  --border-ink:     var(--ink-900);    /* thick comic outline */
+  --border-subtle:  var(--cream-300);
+  --border-strong:  var(--cream-400);
+  --border-clay:    var(--clay-200);
+
+  /* Focus */
+  --focus-ring: var(--clay-500);
+}

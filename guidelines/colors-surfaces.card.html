@@ -1,0 +1,32 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Surface recipes" subtitle="The four section backgrounds: cream, tan, ink, clay" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 18px; background: var(--surface-card); }
+  .grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+  .s { height: 128px; border-radius: var(--radius-lg); padding: 14px; display:flex; flex-direction:column; justify-content:space-between; }
+  .s .k { font-family: var(--font-mono); font-size: 10px; letter-spacing:.1em; text-transform:uppercase; opacity:.8; }
+  .s h4 { margin: 0; font-size: 18px; }
+  .s p { margin: 0; font-size: 12.5px; line-height: 1.4; }
+  .cream { background: var(--cream-100); border: 1.5px solid var(--cream-300); }
+  .tan   { background: var(--cream-200); }
+  .ink   { background: var(--ink-900); }
+  .clay  { background: var(--clay-500); }
+  .cream h4,.tan h4 { color: var(--ink-900); } .cream p,.tan p { color: var(--ink-700); }
+  .ink h4 { color: var(--cream-50); } .ink p { color: var(--cream-300); } .ink .k{color:var(--clay-300);}
+  .clay h4 { color: var(--cream-50); } .clay p { color: var(--clay-50); } .clay .k{color:var(--cream-100);}
+  .cream .k,.tan .k{color:var(--clay-700);}
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="s cream"><span class="k">Default</span><div><h4>Cream</h4><p>The page. Most reading.</p></div></div>
+    <div class="s tan"><span class="k">Alt</span><div><h4>Soft tan</h4><p>Alternating sections.</p></div></div>
+    <div class="s ink"><span class="k">Bold</span><div><h4>Ink</h4><p>High-contrast moments.</p></div></div>
+    <div class="s clay"><span class="k">Brand</span><div><h4>Clay</h4><p>Full-bleed CTA panels.</p></div></div>
+  </div>
+</body>
+</html>

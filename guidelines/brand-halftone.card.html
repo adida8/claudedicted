@@ -1,0 +1,28 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="Halftone texture" subtitle="The signature dot texture — subtle on cream, accent on clay/ink" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 18px; background: var(--surface-card); display:grid; grid-template-columns:repeat(3,1fr); gap:14px; height:180px; box-sizing:border-box;}
+  .t { border-radius: var(--radius-lg); position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:12px; }
+  .t span { font-family:var(--font-mono); font-size:10.5px; letter-spacing:.06em; z-index:1; }
+  .dots { position:absolute; inset:0; background-repeat:repeat; }
+  .cream { background: var(--cream-100); border:1.5px solid var(--cream-300); }
+  .cream span { color: var(--ink-700); }
+  .cream .dots { background-image:url("../assets/halftone-ink.png"); background-size:120px; opacity:.5;}
+  .clay { background: var(--clay-500); }
+  .clay span { color: var(--cream-50); }
+  .clay .dots { background-image:url("../assets/halftone-cream.png"); background-size:120px; opacity:.35;}
+  .ink { background: var(--ink-900); }
+  .ink span { color: var(--clay-300); }
+  .ink .dots { background-image:url("../assets/halftone-clay.png"); background-size:120px; opacity:.5;}
+</style>
+</head>
+<body>
+  <div class="t cream"><div class="dots"></div><span>ink on cream</span></div>
+  <div class="t clay"><div class="dots"></div><span>cream on clay</span></div>
+  <div class="t ink"><div class="dots"></div><span>clay on ink</span></div>
+</body>
+</html>

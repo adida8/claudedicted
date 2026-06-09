@@ -1,0 +1,39 @@
+<!-- @dsCard group="Brand" viewport="700x220" name="Wordmark" subtitle="Bitter, tight tracking — the dot of the i is a clay spark" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 0; background: var(--surface-card); display:grid; place-items:center; height: 220px; overflow:hidden; }
+  /* Reusable wordmark lockup */
+  .wordmark {
+    font-family: var(--font-display);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    color: var(--ink-900);
+    line-height: 1;
+    display: inline-flex;
+    align-items: baseline;
+    font-size: 76px;
+    user-select: none;
+  }
+  .wordmark .i {
+    position: relative;
+    display: inline-block;
+  }
+  /* dotless i drawn via the glyph; spark sits where the tittle would be */
+  .wordmark .i .spark {
+    position: absolute;
+    left: 50%;
+    top: -0.32em;
+    width: 0.30em;
+    height: 0.30em;
+    transform: translateX(-50%) rotate(-8deg);
+  }
+</style>
+</head>
+<body>
+  <span class="wordmark">Claud<span class="i">ı<img class="spark" src="../assets/spark.svg" alt=""></span>cted</span>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!-- @dsCard group="Components" viewport="700x560" name="Cards, avatars, video & signup" subtitle="Surface cards, avatars, the video unit, and the newsletter block" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 26px; background: var(--surface-page); }
+  .stack { display: grid; gap: 22px; }
+  .row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .vids { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .lbl { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: -10px; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { Card, Avatar, VideoCard, NewsletterSignup, Badge } = window.ClaudictedDesignSystem_62a20b;
+    const SP = "../../assets/spark.svg";
+    const THUMB = "../../assets/mascot-placeholder.png";
+    function Demo() {
+      return (
+        <div className="stack">
+          <p className="lbl">Avatars</p>
+          <div className="row">
+            <Avatar name="Mark Janssen" size="xl" ring="clay" spark sparkSrc={SP} />
+            <Avatar name="Ada Lovelace" size="lg" ring="ink" />
+            <Avatar name="Sam Lee" size="md" />
+            <Avatar name="Jo" size="sm" />
+          </div>
+
+          <p className="lbl">Cards</p>
+          <div className="row" style={{alignItems:'stretch'}}>
+            <Card variant="sticker" hover style={{flex:1, minWidth:220}}>
+              <Badge variant="solid-clay" style={{marginBottom:10}}>New</Badge>
+              <h3 style={{margin:'0 0 6px'}}>The sticker card</h3>
+              <p style={{margin:0, color:'var(--text-muted)'}}>Ink outline, hard offset shadow. Peels off the page on hover.</p>
+            </Card>
+            <Card variant="clay" style={{flex:1, minWidth:220}}>
+              <h3 style={{margin:'0 0 6px'}}>Clay panel</h3>
+              <p style={{margin:0, color:'var(--clay-50)'}}>Full-bleed brand moment for CTAs.</p>
+            </Card>
+          </div>
+
+          <p className="lbl">Video cards</p>
+          <div className="vids">
+            <VideoCard title="I built a CRM in a weekend (no code)" duration="12:04" meta="8.2K views · 3 days ago" thumb={THUMB} />
+            <VideoCard title="The 5-minute automation that saved my week" duration="5:31" meta="14K views · 1 week ago" />
+          </div>
+
+          <p className="lbl">Newsletter signup</p>
+          <Card padded={false}>
+            <div style={{padding:'22px'}}>
+              <NewsletterSignup />
+            </div>
+          </Card>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("root")).render(<Demo/>);
+  </script>
+</body>
+</html>
